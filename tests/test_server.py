@@ -34,7 +34,7 @@ class ServerTests(unittest.TestCase):
     def test_token_origin_policy_and_stale_plan_execution(self):
         status, body, headers=self.get("/")
         self.assertEqual(status,200)
-        self.assertIn(b"<h1>Review Before Action</h1>",body)
+        self.assertIn(b"<h1>Change Approval</h1>",body)
         self.assertIn("default-src 'self'",headers["Content-Security-Policy"])
         denied,_=self.post("/api/plan",{"target_id":"DOC-001","payload":"new"})
         self.assertEqual(denied,403)

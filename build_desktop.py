@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a local macOS Review Before Action application bundle."""
+"""Build a local macOS Change Approval application bundle."""
 from __future__ import annotations
 
 import plistlib
@@ -13,7 +13,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent
-APP_NAME = "Review Before Action"
+APP_NAME = "Change Approval"
 ASSET_MANIFEST = ROOT / "desktop-assets.txt"
 OWNER_MARKER = ROOT / "desktop-app-owner.txt"
 BUNDLE_ID = "io.github.gmperkinsmba.review-before-action"
@@ -69,7 +69,7 @@ def main() -> int:
         destination.parent.mkdir(exist_ok=True)
         if destination.exists():
             if not owned_bundle(destination):
-                raise SystemExit(f"Refusing to replace an app without the Review Before Action ownership marker: {destination}")
+                raise SystemExit(f"Refusing to replace an app without the Change Approval ownership marker: {destination}")
             backup_owned_bundle(destination)
         shutil.move(str(build_root / "dist" / f"{APP_NAME}.app"), str(destination))
     print(ROOT / "dist" / f"{APP_NAME}.app")

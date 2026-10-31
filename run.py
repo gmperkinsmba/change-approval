@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Start Review Before Action on loopback."""
+"""Start Change Approval on loopback."""
 import argparse
 from rba.server import serve
 
