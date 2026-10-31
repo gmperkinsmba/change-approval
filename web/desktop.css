@@ -1,0 +1,13 @@
+.desktop-mode .shell{max-width:1120px;padding-inline:28px}
+.desktop-mode .topbar{height:64px}
+.desktop-mode .hero{padding:22px 0 18px}
+.desktop-mode .hero h1{font-size:32px;line-height:1.08;margin-bottom:12px}
+.desktop-mode .hero>p{font-size:13px;line-height:1.45}
+.desktop-mode .workspace{gap:18px}
+.desktop-mode .edit-panel,.desktop-mode .diff-panel{padding:15px}
+.desktop-mode .approval-row{margin-top:8px;padding:10px 12px}
+.desktop-mode .action-row{margin-top:8px}
+.desktop-mode .receipt-banner{margin-top:8px;padding:10px 12px}
+.desktop-mode .audit-section{margin-top:30px}
+.desktop-mode footer{margin-top:24px}
+@media(max-height:720px){.desktop-mode .hero{padding:14px 0}.desktop-mode .workspace{gap:12px}.desktop-mode .diff-block{min-height:60px}.desktop-mode .audit-section{margin-top:18px}}
