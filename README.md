@@ -1,4 +1,4 @@
-# Review Before Action
+# Change Approval
 
 **First principle:** A person must review and approve each change before it applies.
 
@@ -17,7 +17,7 @@ python3.12 -m venv .desktop-venv
 .desktop-venv/bin/python install_desktop.py
 ```
 
-The install step puts `Review Before Action.app` in `~/Applications`. Open it in Finder. Close its window or choose **Quit** to stop the local server. The app bundle includes Python. Runtime data stays in `~/.local/share/review-before-action`; set `RBA_RUNTIME` before launching from a shell to use another folder. Moving the app to Trash leaves runtime data in place.
+The install step puts `Change Approval.app` in `~/Applications`. Open it in Finder. Close its window or choose **Quit** to stop the local server. The app bundle includes Python. Runtime data stays in `~/.local/share/review-before-action`; set `RBA_RUNTIME` before launching from a shell to use another folder. Moving the app to Trash leaves runtime data in place.
 
 The bundle uses ad-hoc signing. It has no Developer ID signature and is not notarized. macOS may ask you to approve opening it. The native app builds on macOS only.
 

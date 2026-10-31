@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Native macOS shell for Review Before Action."""
+"""Native macOS shell for Change Approval."""
 from __future__ import annotations
 
 import os
@@ -49,14 +49,14 @@ def run() -> None:
             window.destroy()
 
     menu = [
-        Menu("Review Before Action", [MenuAction("Settings…", open_settings), MenuAction("Quit", quit_app)]),
+        Menu("Change Approval", [MenuAction("Settings…", open_settings), MenuAction("Quit", quit_app)]),
         Menu("View", [MenuAction("Reload", reload_app)]),
     ]
     try:
         worker.start()
         wait_until_ready(url)
         window = webview.create_window(
-            "Review Before Action", url, width=1080, height=760, min_size=(800, 580), menu=menu
+            "Change Approval", url, width=1080, height=760, min_size=(800, 580), menu=menu
         )
         install_policy(origin)
         webview.start()
@@ -74,8 +74,8 @@ if __name__ == "__main__":
         import AppKit
 
         alert = AppKit.NSAlert.alloc().init()
-        alert.setMessageText_("Review Before Action could not start")
-        alert.setInformativeText_("The local app failed to open. Restart Review Before Action and try again.")
+        alert.setMessageText_("Change Approval could not start")
+        alert.setInformativeText_("The local app failed to open. Restart Change Approval and try again.")
         alert.addButtonWithTitle_("OK")
         alert.runModal()
         raise SystemExit(1)

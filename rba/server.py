@@ -149,7 +149,7 @@ def serve(host: str = "127.0.0.1", port: int = 8335, runtime: str | Path | None 
     if host != "127.0.0.1":
         raise ValueError("Server must bind to 127.0.0.1.")
     httpd = make_server(runtime, port)
-    print(f"Review Before Action listening at http://127.0.0.1:{httpd.server_port}")
+    print(f"Change Approval listening at http://127.0.0.1:{httpd.server_port}")
     try:
         httpd.serve_forever()
     finally:
